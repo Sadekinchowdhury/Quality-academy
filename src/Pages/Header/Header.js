@@ -11,12 +11,15 @@ const Header = () => {
             <Navbar className='d-flex' collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand href="#home">Quality Academy</Navbar.Brand>
-                    <Image src='https://cdn.vectorstock.com/i/1000x1000/87/84/logo-world-globe-in-headphones-concept-work-vector-30428784.webp'
-                        roundedCircle
-                        height='30px'
+                    <Nav.Link>
 
-                    >
-                    </Image>
+                        <Image className='h-7 d-sm-block' src='https://cdn.vectorstock.com/i/1000x1000/87/84/logo-world-globe-in-headphones-concept-work-vector-30428784.webp'
+                            roundedCircle
+                            height='30px'
+
+                        >
+                        </Image>
+                    </Nav.Link>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
