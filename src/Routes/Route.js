@@ -13,6 +13,7 @@ import Home from '../Pages/Home/Home';
 import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
 import PrivetRoute from '../PrivetRout/PrivetRout';
+import Wrong from '../Wrong/Wrong';
 
 
 export const routes = createBrowserRouter([
@@ -55,9 +56,14 @@ export const routes = createBrowserRouter([
                 loader: ({ params }) => fetch(`https://quality-server-sadekinchowdhury.vercel.app/course/${params.id}`),
                 element: <Details></Details>
             }, {
-                path: '/checkout',
+                path: '/course/:id',
+                loader: ({ params }) => fetch(`https://quality-server-sadekinchowdhury.vercel.app/course/${params.id}`),
                 element: <PrivetRoute><Checkout></Checkout></PrivetRoute>
+            }, {
+                path: '/*',
+                element: <Wrong></Wrong>
             }
+
 
 
         ]
