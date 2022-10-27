@@ -26,7 +26,7 @@ const Faq = () => {
                 <Accordion.Item eventKey="1">
                     <Accordion.Header>When expired course</Accordion.Header>
                     <Accordion.Body>
-                        It is Liftime course
+                        It is Liftime course.You can anytime see your video.
                     </Accordion.Body>
                 </Accordion.Item>
 
