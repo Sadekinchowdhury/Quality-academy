@@ -33,7 +33,6 @@ const Login = () => {
                 navigate(from, { from: true })
                 setLoading(false)
 
-
             })
             .catch(error => {
                 console.error('error', error)
@@ -71,7 +70,7 @@ const Login = () => {
 
             })
             .catch(error => {
-
+                console.error('error', error)
                 setError(error.massage)
             })
     }
@@ -103,7 +102,7 @@ const Login = () => {
                 </Button>
 
                 <Form.Text className='text-danger text-9xl'>
-                    <h1>{error}</h1>
+                    <h1>{error && error}</h1>
                     <h1>amar</h1>
 
                 </Form.Text>

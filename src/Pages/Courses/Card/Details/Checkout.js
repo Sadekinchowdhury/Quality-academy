@@ -3,13 +3,15 @@ import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../../../AuthProvide/AuthProvider';
 
-const Checkout = () => {
+const Checkut = () => {
     const { user } = useContext(AuthContext)
     const premium = useLoaderData()
     const { name, price, picture } = premium
     console.log(premium)
     return (
         <div>
+
+            <h1>amar</h1>
             <div className="card w-96 mx-auto mt-10 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
                     <img src={picture} className="rounded-xl" />
@@ -28,4 +30,4 @@ const Checkout = () => {
     );
 };
 
-export default Checkout;
+export default Checkut;

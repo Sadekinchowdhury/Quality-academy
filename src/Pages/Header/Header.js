@@ -81,8 +81,6 @@ const Header = () => {
                                 </Nav.Link>
                                 <Nav.Link>
 
-
-
                                     <button onClick={handLogout} className='bg-primary rounded-2 w-100 h-50'>Log out</button>
                                 </Nav.Link>
 
