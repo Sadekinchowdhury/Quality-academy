@@ -2,9 +2,10 @@ import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import Main from '../Laout/Main';
 import Blog from '../Pages/Blog/Blog';
+import Checkout from '../Pages/Courses/Card/Details/Checkout';
 import Details from '../Pages/Courses/Card/Details/Details';
 import Category from '../Pages/Courses/category/Category';
-import Checkout from '../Pages/Courses/Checkout/CheckOut';
+
 
 
 import Course from '../Pages/Courses/Course';
@@ -56,16 +57,17 @@ export const routes = createBrowserRouter([
                 loader: ({ params }) => fetch(`https://quality-server-sadekinchowdhury.vercel.app/course/${params.id}`),
                 element: <Details></Details>
             }, {
-                path: '/course/:id',
-                loader: ({ params }) => fetch(`https://quality-server-sadekinchowdhury.vercel.app/course/${params.id}`),
-                element: <PrivetRoute><Checkout></Checkout></PrivetRoute>
-            }, {
-                path: '/*',
-                element: <Wrong></Wrong>
+                path: '/premium/:id',
+                loader: ({ params }) => fetch(`https://quality-server-sadekinchowdhury.vercel.app/category/${params.id}`),
+                element: <Checkout></Checkout>
             }
 
 
 
         ]
+    },
+    {
+        path: '/*',
+        element: <Wrong></Wrong>
     }
 ])

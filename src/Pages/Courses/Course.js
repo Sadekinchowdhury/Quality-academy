@@ -8,6 +8,7 @@ import Category from './category/Category';
 const Course = () => {
 
     const cours = useLoaderData()
+    console.log(cours)
 
 
     return (

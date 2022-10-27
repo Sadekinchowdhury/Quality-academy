@@ -14,7 +14,7 @@ import { AuthContext } from '../../AuthProvide/AuthProvider';
 const provider = new GithubAuthProvider()
 const Gprovider = new GoogleAuthProvider()
 const Login = () => {
-    const [error, setError] = useState(true)
+    const [error, setError] = useState("")
     const { setLoading } = useContext(AuthContext)
 
     const navigate = useNavigate()
@@ -58,16 +58,16 @@ const Login = () => {
         console.log(email, password)
         LogInuser(email, password)
             .then(result => {
-                const user = result.user
+                const user = result.user;
                 console.log(user)
                 form.reset()
-                setError('')
+
                 navigate(from, { from: true })
                 setLoading(false)
 
             })
             .catch(error => {
-                console.error('error', error)
+
                 setError(error.massage)
             })
     }
@@ -98,8 +98,9 @@ const Login = () => {
                     Login
                 </Button>
 
-                <Form.Text className='text-danger'>
+                <Form.Text className='text-danger text-9xl'>
                     <h1>{error}</h1>
+                    <h1>amar</h1>
 
                 </Form.Text>
 

@@ -76,29 +76,39 @@ const Header = () => {
                             user?.uid ? <>
 
 
-                                <p className='text-white mr-3'> {user?.displayName}</p>
-                                <button onClick={handLogout} className='bg-primary rounded-2 w-100 h-50'>Log out</button>
+                                <Nav.Link>
+                                    <p className='text-white mr-3'> {user?.displayName}</p>
+                                </Nav.Link>
+                                <Nav.Link>
+
+
+
+                                    <button onClick={handLogout} className='bg-primary rounded-2 w-100 h-50'>Log out</button>
+                                </Nav.Link>
+
 
                             </>
                                 :
                                 <>
                                     <Nav.Link><Link className='no-underline' to='/login'>Login</Link>
                                     </Nav.Link>
-                                    <Nav.Link><Link className='no-underline' to='/register'>Register</Link></Nav.Link>
+                                    <Nav.Link><Link className='no-underline p-2' to='/register'><span>Logout</span></Link></Nav.Link>
 
                                 </>
                         }
 
                         {
 
-                            <Image
-                                title={user?.displayName}
-                                src={user?.photoURL
-                                }
-                                className='h-4 ml-4'
-                                roundedCircle
+                            <Nav.Link>
+                                <Image
+                                    title={user?.displayName}
+                                    src={user?.photoURL
+                                    }
+                                    className='h-4 ml-4'
+                                    roundedCircle
 
-                            ></Image>
+                                ></Image>
+                            </Nav.Link>
                         }
                     </Nav>
 
