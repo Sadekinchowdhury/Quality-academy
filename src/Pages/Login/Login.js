@@ -29,7 +29,9 @@ const Login = () => {
         googleSignin(Gprovider)
             .then(result => {
                 const user = result.user
+
                 console.log(user)
+
                 navigate(from, { from: true })
                 setLoading(false)
 
@@ -64,13 +66,14 @@ const Login = () => {
                 const user = result.user;
                 console.log(user)
                 form.reset()
+                setError(true)
 
                 navigate(from, { from: true })
                 setLoading(false)
 
             })
             .catch(error => {
-                console.error('error', error)
+                console.log('error', error)
                 setError(error.massage)
             })
     }
@@ -102,9 +105,7 @@ const Login = () => {
                 </Button>
 
                 <Form.Text className='text-danger text-9xl'>
-                    <h1>{error && error}</h1>
-                    <h1>amar</h1>
-
+                    <span>{error}</span>
                 </Form.Text>
 
                 <ButtonGroup vertical className='mt-3'>
