@@ -30,6 +30,8 @@ const Login = () => {
             .then(result => {
                 const user = result.user
                 console.log(user)
+                navigate(from, { from: true })
+                setLoading(false)
 
 
             })
@@ -43,6 +45,8 @@ const Login = () => {
             .then(result => {
                 const user = result.user
                 console.log(user)
+                navigate(from, { from: true })
+                setLoading(false)
             })
             .catch(error => {
                 console.error(error)

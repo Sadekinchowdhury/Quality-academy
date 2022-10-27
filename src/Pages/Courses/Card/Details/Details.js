@@ -23,12 +23,12 @@ const Details = () => {
 
             <div>
 
-                <button onClick={genaratePDF} type="primary" className="btn btn-primary mt-4 ">Convert pdf</button>
+                <button onClick={genaratePDF} type="primary" className="btn btn-primary mt-4 mb-4">Convert pdf</button>
 
             </div>
 
 
-            <div className="  card w-96 bg-base-100 shadow-xl">
+            <div className="  card mx-auto w-96 bg-base-100 shadow-xl">
 
 
                 <figure className="px-10 pt-10">

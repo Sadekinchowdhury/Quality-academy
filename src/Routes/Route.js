@@ -13,6 +13,7 @@ import Faq from '../Pages/Faq/Faq';
 import Home from '../Pages/Home/Home';
 import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
+import PrivetRout from '../PrivetRout/PrivetRout';
 import PrivetRoute from '../PrivetRout/PrivetRout';
 import Wrong from '../Wrong/Wrong';
 
@@ -59,7 +60,7 @@ export const routes = createBrowserRouter([
             }, {
                 path: '/premium/:id',
                 loader: ({ params }) => fetch(`https://quality-server-sadekinchowdhury.vercel.app/category/${params.id}`),
-                element: <Checkout></Checkout>
+                element: <PrivetRout><Checkout></Checkout></PrivetRout>
             }
 
 

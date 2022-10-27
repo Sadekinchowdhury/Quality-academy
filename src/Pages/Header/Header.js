@@ -92,7 +92,7 @@ const Header = () => {
                                 <>
                                     <Nav.Link><Link className='no-underline' to='/login'>Login</Link>
                                     </Nav.Link>
-                                    <Nav.Link><Link className='no-underline p-2' to='/register'><span>Logout</span></Link></Nav.Link>
+                                    <Nav.Link><Link className='no-underline p-2' to='/register'><span>Register</span></Link></Nav.Link>
 
                                 </>
                         }
@@ -100,14 +100,16 @@ const Header = () => {
                         {
 
                             <Nav.Link>
+
                                 <Image
                                     title={user?.displayName}
                                     src={user?.photoURL
                                     }
-                                    className='h-4 ml-4'
+                                    className='h-4 ml-4 '
                                     roundedCircle
 
                                 ></Image>
+
                             </Nav.Link>
                         }
                     </Nav>
