@@ -9,20 +9,23 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { AuthContext } from '../../AuthProvide/AuthProvider';
+import Usetitle from '../../Hooks/Usetitle';
+
 
 
 const provider = new GithubAuthProvider()
 const Gprovider = new GoogleAuthProvider()
+
 const Login = () => {
     const [error, setError] = useState("")
     const { setLoading } = useContext(AuthContext)
-
+    Usetitle('title')
     const navigate = useNavigate()
     const location = useLocation()
     const from = location.state?.from?.pathname || '/'
 
 
-    const { googleSignin, githubSignIn, LogInuser } = useContext(AuthContext)
+    const { googleSignin, githubSignIn, LogInuser, user } = useContext(AuthContext)
 
     // google
     const handlGoogle = () => {
@@ -65,8 +68,9 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
+                setError(error)
                 form.reset()
-                setError(true)
+
 
                 navigate(from, { from: true })
                 setLoading(false)
@@ -105,7 +109,7 @@ const Login = () => {
                 </Button>
 
                 <Form.Text className='text-danger text-9xl'>
-                    <span>{error}</span>
+                    {error}
                 </Form.Text>
 
                 <ButtonGroup vertical className='mt-3'>
